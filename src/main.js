@@ -139,8 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function shiftPoint(p) {
         gsap.to(p, {
             duration: 1 + Math.random(),
-            x: p.originX - 50 + Math.random() * 100,
-            y: p.originY - 50 + Math.random() * 100,
+            x: p.originX - 80 + Math.random() * 99,
+            y: p.originY - 20 + Math.random() * 99,
             ease: "circ.inOut",
             onComplete: () => shiftPoint(p)
         });
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p.closest[i].x, p.closest[i].y);
-            ctx.strokeStyle = 'rgba(156,217,249,'+ p.active+')';
+            ctx.strokeStyle = 'rgba(9,210,78,'+ p.active+')';
             ctx.stroke();
         }
     }
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if(!_this.active) return;
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'rgba(156,217,249,'+ _this.active+')';
+            ctx.fillStyle = 'rgba(19,99,5,'+ _this.active+')';
             ctx.fill();
         };
     }
