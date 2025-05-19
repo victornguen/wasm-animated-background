@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@wasm-tool/rollup-plugin-rust": "^3.0.4",
     "vite": "^6.3.5"
   },
   "dependencies": {

@@ -1,0 +1,14 @@
+[package]
+name = "wasm_animation"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = { version="0.2.100" }
+fixed-queue = "0.5.1"
+js-sys = "0.3.77"
+
