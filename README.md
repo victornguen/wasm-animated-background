@@ -180,29 +180,3 @@ Adjust animation parameters in the Rust code:
 ```rust
 let smoothing = 0.02; // Lower values = smoother but slower animation
 ```
-
-## Troubleshooting
-
-### WASM Module Fails to Load
-
-1. Ensure wasm-pack is installed: `cargo install wasm-pack`
-2. Check that the build completed successfully
-3. Verify the `pkg/` directory contains the generated files
-4. The application will automatically fall back to JavaScript
-
-### Poor Performance
-
-1. Check the performance monitor for FPS
-2. Reduce particle count by increasing `grid_size`
-3. Ensure you're using a modern browser with WASM support
-4. Close other resource-intensive applications
-
-### Build Errors
-
-1. Ensure Rust is properly installed: `rustc --version`
-2. Update wasm-pack: `cargo install wasm-pack --force`
-3. Clear the build cache: `rm -rf wasm_animation/target`
-
-## License
-
-This project is open source and available under the MIT License.
