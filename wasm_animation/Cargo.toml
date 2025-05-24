@@ -1,0 +1,24 @@
+[package]
+name = "wasm_animation"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = { version = "0.2.100", features = ["serde-serialize"] }
+js-sys = "0.3.77"
+web-sys = { version = "0.3.77", features = ["console"] }
+
+[dependencies.wasm-bindgen-futures]
+version = "0.4.45"
+
+# Optimization settings for release builds
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+
